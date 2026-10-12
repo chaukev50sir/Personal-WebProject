@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en-ZA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Courses &amp; archives – Riverside Library Learning Portal</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <a class="skip-link" href="#results-heading">Skip to results</a>
+
+  <header class="site-header">
+    <span class="wf-tag" aria-hidden="true">&lt;header&gt;</span>
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <span class="wf-placeholder wf-logo" aria-hidden="true"></span>
+        Riverside Library Learning Portal
+      </a>
+      <nav class="primary-nav" aria-label="Primary">
+    <span class="wf-tag" aria-hidden="true">&lt;nav&gt; Primary</span>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="search.html" aria-current="page">Courses &amp; archives</a></li>
+          <li><a href="book.html">Book a room</a></li>
+          <li><a href="index.html#events">Events</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="page" tabindex="-1">
+    <span class="wf-tag" aria-hidden="true">&lt;main&gt;</span>
+    <nav aria-label="Breadcrumb" class="breadcrumb">
+    <span class="wf-tag" aria-hidden="true">&lt;nav&gt; Breadcrumb</span>
+      <ol>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="search.html" aria-current="page">Courses &amp; archives</a></li>
+      </ol>
+    </nav>
+
+    <h1>Courses and learning archives</h1>
+    <p>Search free courses, recorded lectures, e-books and events.</p>
+
+    <div class="with-sidebar">
+      <!-- Filters before results so tab order matches visual order (2.4.3) -->
+      <aside aria-labelledby="filter-heading" class="filters">
+    <span class="wf-tag" aria-hidden="true">&lt;aside&gt;</span>
+        <h2 id="filter-heading">Filter results</h2>
+        <form action="search.html" method="get" aria-labelledby="filter-heading">
+          <div class="field">
+            <label for="q">Search by keyword</label>
+            <input type="search" id="q" name="q">
+          </div>
+
+          <!-- <details> keeps this JS-free; the app uses <button aria-expanded> and aria-pressed chips. -->
+          <details class="filter-group" open>
+            <summary>Resource type</summary>
+            <fieldset>
+              <legend class="visually-hidden">Resource type</legend>
+              <div class="choice"><input type="checkbox" id="type-course" name="type" value="course"><label for="type-course">Courses</label></div>
+              <div class="choice"><input type="checkbox" id="type-archive" name="type" value="archive"><label for="type-archive">Learning archives</label></div>
+              <div class="choice"><input type="checkbox" id="type-event" name="type" value="event"><label for="type-event">Events</label></div>
+            </fieldset>
+          </details>
+
+          <details class="filter-group">
+            <summary>Topic</summary>
+            <fieldset>
+              <legend class="visually-hidden">Topic</legend>
+              <div class="choice"><input type="checkbox" id="topic-digital" name="topic" value="digital"><label for="topic-digital">Digital skills</label></div>
+              <div class="choice"><input type="checkbox" id="topic-languages" name="topic" value="languages"><label for="topic-languages">Languages</label></div>
+              <div class="choice"><input type="checkbox" id="topic-careers" name="topic" value="careers"><label for="topic-careers">Careers</label></div>
+              <div class="choice"><input type="checkbox" id="topic-history" name="topic" value="history"><label for="topic-history">History</label></div>
+              <div class="choice"><input type="checkbox" id="topic-finance" name="topic" value="finance"><label for="topic-finance">Money &amp; finance</label></div>
+            </fieldset>
+          </details>
+
+          <details class="filter-group">
+            <summary>Format</summary>
+            <fieldset>
+              <legend class="visually-hidden">Format</legend>
+              <div class="choice"><input type="radio" id="f-any" name="format" value="" checked><label for="f-any">Any format</label></div>
+              <div class="choice"><input type="radio" id="f-online" name="format" value="online"><label for="f-online">Online</label></div>
+              <div class="choice"><input type="radio" id="f-person" name="format" value="in-person"><label for="f-person">In person</label></div>
+            </fieldset>
+          </details>
+
+          <p><button type="submit" class="button">Apply filters</button></p>
+        </form>
+      </aside>
+
+      <section aria-labelledby="results-heading">
+    <span class="wf-tag" aria-hidden="true">&lt;section&gt;</span>
+        <h2 id="results-heading" tabindex="-1">Results</h2>
+        <!-- Announced via a polite live region in the app -->
+        <p class="result-count" role="status">Showing 3 of 12 resources</p>
+
+        <ul class="results">
+          <li>
+          <article class="card spine-digital" aria-labelledby="r1">
+    <span class="wf-tag" aria-hidden="true">&lt;article&gt;</span>
+          <h3 id="r1">Excel for beginners</h3>
+          <ul class="tags">
+            <li class="tag-topic">Digital skills</li>
+            <li>Course</li>
+            <li>In person</li>
+            <li>6 weeks</li>
+          </ul>
+          
+          <p>Spreadsheets, formulas and budgeting. Workbooks are tested with screen readers.</p>
+          <a href="book.html?item=excel-beginners">View details<span class="visually-hidden">: Excel for beginners</span></a>
+        </article>
+          </li>
+          <li>
+          <article class="card spine-languages" aria-labelledby="r2">
+    <span class="wf-tag" aria-hidden="true">&lt;article&gt;</span>
+          <h3 id="r2">Conversational isiZulu, level 1</h3>
+          <ul class="tags">
+            <li class="tag-topic">Languages</li>
+            <li>Course</li>
+            <li>Online</li>
+            <li>8 weeks</li>
+          </ul>
+          
+          <p>Live sessions with full transcripts and captioned recordings.</p>
+          <a href="book.html?item=isizulu-1">View details<span class="visually-hidden">: Conversational isiZulu, level 1</span></a>
+        </article>
+          </li>
+          <li>
+          <article class="card spine-history" aria-labelledby="r3">
+    <span class="wf-tag" aria-hidden="true">&lt;article&gt;</span>
+          <h3 id="r3">History of the Western Cape: lecture series</h3>
+          <ul class="tags">
+            <li class="tag-topic">History</li>
+            <li>Learning archive</li>
+            <li>Online</li>
+            <li>10 recordings</li>
+          </ul>
+          
+          <p>Audio lectures with downloadable text transcripts.</p>
+          <a href="book.html?item=wc-history">View details<span class="visually-hidden">: History of the Western Cape: lecture series</span></a>
+        </article>
+          </li>
+        </ul>
+
+        <nav aria-label="Results pages" class="breadcrumb">
+    <span class="wf-tag" aria-hidden="true">&lt;nav&gt; Results pages</span>
+          <ol>
+            <li><a href="#" aria-current="page">Page 1</a></li>
+            <li><a href="#">Page 2</a></li>
+            <li><a href="#">Page 3</a></li>
+          </ol>
+        </nav>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <span class="wf-tag" aria-hidden="true">&lt;footer&gt;</span>
+    <div class="footer-inner">
+      <p>Riverside Public Library, open Monday to Saturday, 09:00 to 17:00</p>
+      <p><a href="#">Accessibility statement</a></p>
+      <p><a href="#">Contact us</a></p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en-ZA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home – Riverside Library Learning Portal</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <span class="wf-tag" aria-hidden="true">&lt;header&gt;</span>
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <span class="wf-placeholder wf-logo" aria-hidden="true"></span>
+        Riverside Library Learning Portal
+      </a>
+      <nav class="primary-nav" aria-label="Primary">
+    <span class="wf-tag" aria-hidden="true">&lt;nav&gt; Primary</span>
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="search.html">Courses &amp; archives</a></li>
+          <li><a href="book.html">Book a room</a></li>
+          <li><a href="index.html#events">Events</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="page" tabindex="-1">
+    <span class="wf-tag" aria-hidden="true">&lt;main&gt;</span>
+    <div class="hero">
+      <div>
+        <h1>Learn, borrow and meet at your library</h1>
+        <p class="lede">Free courses, recorded lectures, study rooms and events for everyone in the municipality.</p>
+
+        <section aria-labelledby="search-heading" class="search-panel">
+    <span class="wf-tag" aria-hidden="true">&lt;section&gt;</span>
+          <h2 id="search-heading">Search the catalogue</h2>
+          <!-- GET to the listing page: works without JS -->
+          <form action="search.html" method="get" role="search" aria-labelledby="search-heading" class="search-row">
+            <div class="field">
+              <label for="home-q">Search courses, archives and events</label>
+              <span id="home-q-hint" class="hint">For example: Excel, isiZulu, interview</span>
+              <input type="search" id="home-q" name="q" aria-describedby="home-q-hint">
+            </div>
+            <button type="submit" class="button">Search</button>
+          </form>
+        </section>
+      </div>
+      <!-- Decorative illustration (aria-hidden in the app) -->
+      <div class="wf-placeholder" aria-hidden="true"><span>Illustration: bookshelf (decorative)</span></div>
+    </div>
+
+    <section aria-labelledby="services-heading">
+    <span class="wf-tag" aria-hidden="true">&lt;section&gt;</span>
+      <h2 id="services-heading">What you can do here</h2>
+      <ul class="grid plain-list">
+        <li class="service spine-digital">
+          <h3>Free courses</h3>
+          <p>Digital skills, languages and job-readiness, in person and online.</p>
+          <a href="search.html?type=course">Browse courses<span class="visually-hidden">: free courses</span></a>
+        </li>
+        <li class="service spine-languages">
+          <h3>Learning archives</h3>
+          <p>Recorded lectures, e-books and audiobooks, all with transcripts.</p>
+          <a href="search.html?type=archive">Browse archives<span class="visually-hidden">: learning archives</span></a>
+        </li>
+        <li class="service spine-careers">
+          <h3>Study rooms</h3>
+          <p>Rooms for 1 to 12 people, free for library members.</p>
+          <a href="book.html">Book a room<span class="visually-hidden">: study rooms</span></a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="events" aria-labelledby="events-heading">
+    <span class="wf-tag" aria-hidden="true">&lt;section&gt;</span>
+      <h2 id="events-heading">Upcoming events</h2>
+      <ul class="results">
+        <li>
+        <article class="card event spine-careers" aria-labelledby="ev1">
+    <span class="wf-tag" aria-hidden="true">&lt;article&gt;</span>
+          <!-- Decorative; the date is in <time> -->
+          <p class="stamp" aria-hidden="true"><span class="stamp-weekday">Sat</span><span class="stamp-day">24</span><span class="stamp-month">Oct</span></p>
+          <div>
+          <h3 id="ev1">CV writing workshop</h3>
+          <ul class="tags">
+            <li class="tag-topic">Careers</li>
+            <li>Event</li>
+            <li>In person</li>
+            <li>2 hours</li>
+          </ul>
+          <p class="meta"><time datetime="2026-10-24T10:00">Saturday 24 October, 10:00</time></p>
+          <p>Bring your CV and get one-on-one feedback from a recruiter.</p>
+          <a href="book.html?event=cv-workshop">View details<span class="visually-hidden">: CV writing workshop</span></a>
+          </div>
+        </article>
+        </li>
+        <li>
+        <article class="card event spine-history" aria-labelledby="ev2">
+    <span class="wf-tag" aria-hidden="true">&lt;article&gt;</span>
+          <!-- Decorative; the date is in <time> -->
+          <p class="stamp" aria-hidden="true"><span class="stamp-weekday">Wed</span><span class="stamp-day">28</span><span class="stamp-month">Oct</span></p>
+          <div>
+          <h3 id="ev2">Heritage Month talk: local oral histories</h3>
+          <ul class="tags">
+            <li class="tag-topic">History</li>
+            <li>Event</li>
+            <li>In person</li>
+            <li>1.5 hours</li>
+          </ul>
+          <p class="meta"><time datetime="2026-10-28T17:30">Wednesday 28 October, 17:30</time></p>
+          <p>Residents share recorded stories from the area.</p>
+          <a href="book.html?event=heritage-talk">View details<span class="visually-hidden">: Heritage Month talk: local oral histories</span></a>
+          </div>
+        </article>
+        </li>
+      </ul>
+    </section>
+
+    <aside aria-labelledby="access-heading" class="panel">
+    <span class="wf-tag" aria-hidden="true">&lt;aside&gt;</span>
+      <h2 id="access-heading">Accessibility at the library</h2>
+      <p>Every public PC has NVDA, JAWS and a screen magnifier. The media room also has a braille display. Tell us about any support you need when you book.</p>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <span class="wf-tag" aria-hidden="true">&lt;footer&gt;</span>
+    <div class="footer-inner">
+      <p>Riverside Public Library, open Monday to Saturday, 09:00 to 17:00</p>
+      <p><a href="#">Accessibility statement</a></p>
+      <p><a href="#">Contact us</a></p>
+    </div>
+  </footer>
+</body>
+</html>
