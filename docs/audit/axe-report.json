@@ -1,0 +1,847 @@
+{
+  "generated": "2026-10-12T17:31:26.827Z",
+  "axe": [
+    {
+      "label": "React: home",
+      "violations": [],
+      "passes": 24,
+      "incomplete": []
+    },
+    {
+      "label": "React: catalogue",
+      "violations": [],
+      "passes": 24,
+      "incomplete": []
+    },
+    {
+      "label": "React: catalogue, all panels open, filter on",
+      "violations": [],
+      "passes": 24,
+      "incomplete": []
+    },
+    {
+      "label": "React: resource detail",
+      "violations": [],
+      "passes": 21,
+      "incomplete": []
+    },
+    {
+      "label": "React: dialog open",
+      "violations": [],
+      "passes": 12,
+      "incomplete": [
+        "color-contrast"
+      ]
+    },
+    {
+      "label": "React: booking form",
+      "violations": [],
+      "passes": 23,
+      "incomplete": []
+    },
+    {
+      "label": "React: booking form, error state",
+      "violations": [],
+      "passes": 26,
+      "incomplete": []
+    },
+    {
+      "label": "Wireframe: index.html",
+      "violations": [],
+      "passes": 24,
+      "incomplete": []
+    },
+    {
+      "label": "Wireframe: search.html",
+      "violations": [],
+      "passes": 25,
+      "incomplete": []
+    },
+    {
+      "label": "Wireframe: book.html",
+      "violations": [],
+      "passes": 28,
+      "incomplete": []
+    }
+  ],
+  "tabSequences": [
+    {
+      "label": "React: home",
+      "stops": 13,
+      "missingFocusRing": 0,
+      "lowFocusContrast": [],
+      "seq": [
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Skip to main content",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Riverside Library Learning Portal",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Home",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Courses & archives",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Book a room",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "input",
+          "type": "search",
+          "name": "Search courses, archives and events",
+          "visibleFocus": true,
+          "focusContrast": 15.91
+        },
+        {
+          "tag": "button",
+          "type": "submit",
+          "name": "Search",
+          "visibleFocus": true,
+          "focusContrast": 9.79
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Browse courses: free courses",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Browse archives: learning archives",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Book a room: study rooms",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "View details: CV writing workshop",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "View details: Heritage Month talk: local oral histories",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "View details: Staying safe online: webinar",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        }
+      ]
+    },
+    {
+      "label": "React: catalogue",
+      "stops": 19,
+      "missingFocusRing": 0,
+      "lowFocusContrast": [],
+      "seq": [
+        {
+          "tag": "input",
+          "type": "search",
+          "name": "Search by keyword",
+          "visibleFocus": true,
+          "focusContrast": 15.91
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "name": "Resource type",
+          "visibleFocus": true,
+          "focusContrast": 15.91
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "name": "Courses",
+          "visibleFocus": true,
+          "focusContrast": 9.79
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "name": "Digital archives",
+          "visibleFocus": true,
+          "focusContrast": 9.79
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "name": "Events",
+          "visibleFocus": true,
+          "focusContrast": 9.79
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "name": "Topic",
+          "visibleFocus": true,
+          "focusContrast": 15.91
+        },
+        {
+          "tag": "button",
+          "type": "button",
+          "name": "Format",
+          "visibleFocus": true,
+          "focusContrast": 15.91
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "View details: Excel for beginners",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "View details: Conversational isiZulu, level 1",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "View details: Afrikaans for everyday use",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "View details: Introduction to coding with Python",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "View details: Bookkeeping basics for small businesses",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "View details: History of the Western Cape: lecture series",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "View details: Job interview skills: recorded workshops",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "View details: Digital literacy e-book collection",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "View details: Personal finance audiobooks",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "View details: CV writing workshop",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "View details: Heritage Month talk: local oral histories",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "View details: Staying safe online: webinar",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        }
+      ]
+    },
+    {
+      "label": "React: booking form",
+      "stops": 8,
+      "missingFocusRing": 0,
+      "lowFocusContrast": [],
+      "seq": [
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "Full name",
+          "visibleFocus": true,
+          "focusContrast": 15.91
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "Email address",
+          "visibleFocus": true,
+          "focusContrast": 15.91
+        },
+        {
+          "tag": "select",
+          "type": "select-one",
+          "name": "Room",
+          "visibleFocus": true,
+          "focusContrast": 15.91
+        },
+        {
+          "tag": "input",
+          "type": "date",
+          "name": "Date",
+          "visibleFocus": true,
+          "focusContrast": 15.91
+        },
+        {
+          "tag": "input",
+          "type": "date",
+          "name": "Date",
+          "visibleFocus": true,
+          "focusContrast": 15.91
+        },
+        {
+          "tag": "input",
+          "type": "number",
+          "name": "Number of people",
+          "visibleFocus": true,
+          "focusContrast": 15.91
+        },
+        {
+          "tag": "textarea",
+          "type": "textarea",
+          "name": "Access needs (optional)",
+          "visibleFocus": true,
+          "focusContrast": 15.91
+        },
+        {
+          "tag": "button",
+          "type": "submit",
+          "name": "Request booking",
+          "visibleFocus": true,
+          "focusContrast": 9.79
+        }
+      ]
+    },
+    {
+      "label": "Wireframe: index.html",
+      "stops": 15,
+      "missingFocusRing": 0,
+      "lowFocusContrast": [],
+      "seq": [
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Skip to main content",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Riverside Library Learning Portal",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Home",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Courses & archives",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Book a room",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Events",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "input",
+          "type": "search",
+          "name": "Search courses, archives and events",
+          "visibleFocus": true,
+          "focusContrast": 15.91
+        },
+        {
+          "tag": "button",
+          "type": "submit",
+          "name": "Search",
+          "visibleFocus": true,
+          "focusContrast": 15.91
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Browse courses: free courses",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Browse archives: learning archives",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Book a room: study rooms",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "View details: CV writing workshop",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "View details: Heritage Month talk: local oral histories",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Accessibility statement",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Contact us",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        }
+      ]
+    },
+    {
+      "label": "Wireframe: search.html",
+      "stops": 25,
+      "missingFocusRing": 0,
+      "lowFocusContrast": [],
+      "seq": [
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Skip to main content",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Skip to results",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Riverside Library Learning Portal",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Home",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Courses & archives",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Book a room",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Events",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Home",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Courses & archives",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "input",
+          "type": "search",
+          "name": "Search by keyword",
+          "visibleFocus": true,
+          "focusContrast": 15.91
+        },
+        {
+          "tag": "summary",
+          "type": "",
+          "name": "Resource type",
+          "visibleFocus": true,
+          "focusContrast": 15.91
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "Courses",
+          "visibleFocus": true,
+          "focusContrast": 21
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "Learning archives",
+          "visibleFocus": true,
+          "focusContrast": 21
+        },
+        {
+          "tag": "input",
+          "type": "checkbox",
+          "name": "Events",
+          "visibleFocus": true,
+          "focusContrast": 21
+        },
+        {
+          "tag": "summary",
+          "type": "",
+          "name": "Topic",
+          "visibleFocus": true,
+          "focusContrast": 15.91
+        },
+        {
+          "tag": "summary",
+          "type": "",
+          "name": "Format",
+          "visibleFocus": true,
+          "focusContrast": 15.91
+        },
+        {
+          "tag": "button",
+          "type": "submit",
+          "name": "Apply filters",
+          "visibleFocus": true,
+          "focusContrast": 15.91
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "View details: Excel for beginners",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "View details: Conversational isiZulu, level 1",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "View details: History of the Western Cape: lecture series",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Page 1",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Page 2",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Page 3",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Accessibility statement",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Contact us",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        }
+      ]
+    },
+    {
+      "label": "Wireframe: book.html",
+      "stops": 23,
+      "missingFocusRing": 0,
+      "lowFocusContrast": [],
+      "seq": [
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Skip to main content",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Riverside Library Learning Portal",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Home",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Courses & archives",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Book a room",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Events",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Home",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Book a room",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Enter an email address in the format name@example.com",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "input",
+          "type": "text",
+          "name": "Full name",
+          "visibleFocus": true,
+          "focusContrast": 15.91
+        },
+        {
+          "tag": "input",
+          "type": "email",
+          "name": "Email address",
+          "visibleFocus": true,
+          "focusContrast": 15.91
+        },
+        {
+          "tag": "select",
+          "type": "select-one",
+          "name": "Room",
+          "visibleFocus": true,
+          "focusContrast": 15.91
+        },
+        {
+          "tag": "input",
+          "type": "date",
+          "name": "Date",
+          "visibleFocus": true,
+          "focusContrast": 15.91
+        },
+        {
+          "tag": "input",
+          "type": "date",
+          "name": "Date",
+          "visibleFocus": true,
+          "focusContrast": 15.91
+        },
+        {
+          "tag": "input",
+          "type": "date",
+          "name": "Date",
+          "visibleFocus": true,
+          "focusContrast": 15.91
+        },
+        {
+          "tag": "input",
+          "type": "date",
+          "name": "Date",
+          "visibleFocus": true,
+          "focusContrast": 15.91
+        },
+        {
+          "tag": "input",
+          "type": "radio",
+          "name": "09:00 to 11:00",
+          "visibleFocus": true,
+          "focusContrast": 21
+        },
+        {
+          "tag": "input",
+          "type": "number",
+          "name": "Number of people",
+          "visibleFocus": true,
+          "focusContrast": 15.91
+        },
+        {
+          "tag": "textarea",
+          "type": "textarea",
+          "name": "Access needs (optional)",
+          "visibleFocus": true,
+          "focusContrast": 15.91
+        },
+        {
+          "tag": "button",
+          "type": "submit",
+          "name": "Request booking",
+          "visibleFocus": true,
+          "focusContrast": 15.91
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Back to courses and archives",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Accessibility statement",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        },
+        {
+          "tag": "a",
+          "type": "",
+          "name": "Contact us",
+          "visibleFocus": true,
+          "focusContrast": 8.83
+        }
+      ]
+    }
+  ],
+  "dialogCheck": {
+    "focusStaysInDialogWhileOpen": [
+      true,
+      true,
+      false,
+      true
+    ],
+    "focusAfterEscape": "Register: Excel for beginners"
+  }
+}
