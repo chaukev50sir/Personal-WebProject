@@ -1,0 +1,34 @@
+{
+  "name": "riverside-library-hub",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "MD-2026-0143: accessible Community Resource Hub prototype (Library portal)",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "contrast": "node scripts/contrast.mjs",
+    "audit:axe": "node scripts/axe-audit.mjs"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@testing-library/dom": "^10.4.2",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.7",
+    "@vitejs/plugin-react": "^4.7.0",
+    "axe-core": "^4.14.0",
+    "jsdom": "^25.0.1",
+    "playwright": "^1.64.0",
+    "vite": "^5.4.21",
+    "vitest": "^2.1.9",
+    "vitest-axe": "^0.1.0"
+  }
+}

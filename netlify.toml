@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Hash routing means no SPA rewrite is strictly needed, but keep one for safety.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
