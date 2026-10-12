@@ -1,0 +1,417 @@
+/* Riverside Library Learning Portal: React prototype styles
+   Theme: "shelf & spine". Each topic has a book-spine colour; focused links
+   get a marigold highlighter. Headings: Literata. Body: Atkinson Hyperlegible.
+
+   Contrast (WCAG 2.1; 4.5:1 text, 3:1 non-text). Checked by `npm run contrast`.
+   #1B2420 on #FFFFFF  15.91  body text
+   #1B2420 on #F1F6F3  14.56  text on panels
+   #4B5A53 on #FFFFFF   7.28  hints, input borders
+   #4B5A53 on #F1F6F3   6.66  hints on panels
+   #FFFFFF on #0E4D3C   9.79  header text, button labels
+   #0E4D3C on #FFFFFF   9.79  links, secondary buttons
+   #F5B700 on #0E4D3C   5.43  current-page bar, header focus ring
+   #1B2420 on #F5B700   8.83  focused link, badge, skip link
+   #B42318 on #FFFFFF   6.57  inline errors
+   #B42318 on #FEF3F2   6.05  error summary
+   #11603F on #ECF8F1   6.96  confirmation
+   Spines, white on colour / colour on tint:
+   digital   #1D5FAD  6.38 / 5.61 (#EAF1FA)
+   languages #8E2C6B  7.71 / 6.72 (#F8ECF4)
+   careers   #A34700  6.07 / 5.41 (#FBF0E6)
+   history   #7A4A12  7.46 / 6.54 (#F6EFE6)
+   finance   #0B6B6B  6.31 / 5.59 (#E6F4F4)
+   Marigold on white is 1.80, so it only ever sits behind dark text.
+*/
+
+@font-face { font-family: "Atkinson Hyperlegible"; font-style: normal; font-weight: 400; font-display: swap; src: url("./fonts/atkinson-hyperlegible-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Atkinson Hyperlegible"; font-style: italic; font-weight: 400; font-display: swap; src: url("./fonts/atkinson-hyperlegible-latin-400-italic.woff2") format("woff2"); }
+@font-face { font-family: "Atkinson Hyperlegible"; font-style: normal; font-weight: 700; font-display: swap; src: url("./fonts/atkinson-hyperlegible-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "Atkinson Hyperlegible"; font-style: italic; font-weight: 700; font-display: swap; src: url("./fonts/atkinson-hyperlegible-latin-700-italic.woff2") format("woff2"); }
+@font-face { font-family: "Literata"; font-style: normal; font-weight: 600; font-display: swap; src: url("./fonts/literata-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Literata"; font-style: normal; font-weight: 700; font-display: swap; src: url("./fonts/literata-latin-700-normal.woff2") format("woff2"); }
+
+:root {
+  --ink: #1B2420;
+  --ink-muted: #4B5A53;
+  --paper: #FFFFFF;
+  --panel: #F1F6F3;
+  --shelf: #0E4D3C;
+  --shelf-strong: #0A3A2D;
+  --on-shelf: #FFFFFF;
+  --on-shelf-soft: #C8E6D9;       /* 7.35:1 on --shelf */
+  --marigold: #F5B700;
+  --danger: #B42318;
+  --danger-bg: #FEF3F2;
+  --success: #11603F;
+  --success-bg: #ECF8F1;
+
+  /* Book-spine colours, one per topic */
+  --spine-digital: #1D5FAD;   --tint-digital: #EAF1FA;
+  --spine-languages: #8E2C6B; --tint-languages: #F8ECF4;
+  --spine-careers: #A34700;   --tint-careers: #FBF0E6;
+  --spine-history: #7A4A12;   --tint-history: #F6EFE6;
+  --spine-finance: #0B6B6B;   --tint-finance: #E6F4F4;
+
+  --font-body: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-head: "Literata", Georgia, "Times New Roman", serif;
+  --radius: 6px;
+  --space: 1rem;
+  --measure: 66ch;
+}
+
+/* Spine classes set the colour pair for any component that uses them. */
+.spine-digital   { --spine: var(--spine-digital);   --tint: var(--tint-digital); }
+.spine-languages { --spine: var(--spine-languages); --tint: var(--tint-languages); }
+.spine-careers   { --spine: var(--spine-careers);   --tint: var(--tint-careers); }
+.spine-history   { --spine: var(--spine-history);   --tint: var(--tint-history); }
+.spine-finance   { --spine: var(--spine-finance);   --tint: var(--tint-finance); }
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { font-size: 100%; } /* respect the user's browser font size (1.4.4) */
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.6;           /* 1.4.12 text spacing headroom */
+  color: var(--ink);
+  background: var(--paper);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-head);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 1.75em 0 0.5em;
+}
+h1 { font-size: clamp(2rem, 1.4rem + 2.6vw, 3.1rem); line-height: 1.08; letter-spacing: -0.015em; margin-top: 0.5em; }
+h2 { font-size: 1.6rem; }
+h3 { font-size: 1.2rem; font-weight: 600; }
+p, li { max-width: var(--measure); }
+
+a { color: var(--shelf); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 3px; }
+
+/* ---------- Focus (2.4.7, 1.4.11) ---------- */
+:focus { outline: 3px solid var(--ink); outline-offset: 2px; }
+:focus:not(:focus-visible) { outline: none; }
+:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 8px var(--marigold);
+}
+a:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 0;
+  box-shadow: none;
+  /* !important: component link colours must not override the highlighter */
+  background: var(--marigold) !important;
+  color: var(--ink) !important;
+  text-decoration-color: var(--ink);
+}
+/* Chromium's date input focuses an inner part; ring the host instead. */
+input[type="date"]:focus, input[type="date"]:focus-within {
+  outline: 3px solid var(--ink); outline-offset: 2px; box-shadow: 0 0 0 8px var(--marigold);
+}
+/* Programmatic focus targets: ring only, no halo. */
+[tabindex="-1"]:focus-visible { box-shadow: none; }
+[tabindex="-1"]:focus:not(:focus-visible) { outline: none; }
+
+/* ---------- Skip link (2.4.1) ---------- */
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: -10rem;
+  z-index: 10;
+  padding: 0.6rem 1rem;
+  font-weight: 700;
+  color: var(--ink);
+  background: var(--marigold);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+}
+.skip-link:focus { top: 0.75rem; }
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0);
+  white-space: nowrap; border: 0;
+}
+
+/* ---------- Layout ---------- */
+.header-inner, .page, .footer-inner {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: var(--space) clamp(1rem, 4vw, 2rem);
+}
+.page { padding-bottom: 4rem; }
+main { display: block; }
+
+.with-sidebar { display: grid; gap: 2rem; grid-template-columns: 1fr; align-items: start; }
+@media (min-width: 52rem) {
+  .with-sidebar { grid-template-columns: 17rem 1fr; }
+  .with-sidebar.sidebar-right { grid-template-columns: 1fr 19rem; }
+}
+
+.grid { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); }
+.plain-list, .results { list-style: none; padding: 0; margin: 0; }
+.plain-list > li, .results > li { max-width: none; }
+.results { display: grid; gap: 1rem; }
+
+/* ---------- Header: the shelf ---------- */
+.site-header { background: var(--shelf); color: var(--on-shelf); }
+/* A row of book spines along the bottom edge of the header. Decorative only. */
+.site-header::after {
+  content: "";
+  display: block;
+  height: 12px;
+  background: linear-gradient(90deg,
+    var(--spine-digital) 0 9%, var(--marigold) 9% 11%, var(--spine-languages) 11% 22%,
+    #FFFFFF 22% 23%, var(--spine-careers) 23% 37%, var(--spine-history) 37% 44%,
+    var(--marigold) 44% 46%, var(--spine-finance) 46% 58%, var(--spine-digital) 58% 63%,
+    #FFFFFF 63% 64%, var(--spine-languages) 64% 76%, var(--spine-careers) 76% 81%,
+    var(--marigold) 81% 83%, var(--spine-finance) 83% 92%, var(--spine-history) 92% 100%);
+}
+.header-inner {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 0.5rem 2rem; padding-top: 1.1rem; padding-bottom: 1.1rem;
+}
+.site-header a { color: var(--on-shelf); }
+.brand {
+  display: inline-flex; align-items: center; gap: 0.65rem;
+  font-family: var(--font-head); font-weight: 700; font-size: 1.3rem;
+  text-decoration: none; line-height: 1.2;
+}
+.brand svg { flex: none; }
+.brand small { display: block; font-family: var(--font-body); font-weight: 400; font-size: 0.875rem; color: var(--on-shelf-soft); }
+
+.primary-nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0 1.25rem; margin: 0; padding: 0; }
+@media (min-width: 40rem) { .primary-nav ul { gap: 0.25rem 1.75rem; } }
+@media (max-width: 30rem) { .brand { font-size: 1.1rem; } }
+.primary-nav a {
+  display: inline-block;
+  padding: 0.55rem 0.15rem;   /* 44px target height */
+  text-decoration: none;
+  font-weight: 700;
+  border-bottom: 4px solid transparent;
+}
+.primary-nav a:hover { border-bottom-color: var(--on-shelf-soft); }
+/* Current page: marigold bar AND bold weight AND aria-current, not colour alone. */
+.primary-nav a[aria-current="page"] { border-bottom-color: var(--marigold); }
+.site-header a:focus-visible { outline-color: var(--marigold); }
+
+/* ---------- Home hero ---------- */
+.hero { display: grid; gap: 2rem; align-items: end; padding: 1.5rem 0 1rem; }
+@media (min-width: 56rem) { .hero { grid-template-columns: 1.15fr 0.85fr; } }
+.hero h1 { margin-top: 0.25em; max-width: 14ch; }
+.lede { font-size: 1.2rem; color: var(--ink-muted); }
+.hero-shelf { width: 100%; max-width: 26rem; height: auto; justify-self: end; }
+@media (max-width: 55.99rem) { .hero-shelf { display: none; } }
+
+.search-panel {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background: var(--panel);
+  border-radius: var(--radius);
+  border-top: 6px solid var(--shelf);
+}
+.search-panel h2 { margin-top: 0; }
+.search-row { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: flex-end; }
+.search-row .field { flex: 1 1 18rem; margin-bottom: 0; }
+.search-row input { max-width: none; min-height: 52px; font-size: 1.125rem; }
+.search-row .button { min-height: 52px; }
+
+/* ---------- Cards with a book spine ---------- */
+.card {
+  position: relative;
+  padding: 1.1rem 1.25rem 1.2rem 1.5rem;
+  background: var(--paper);
+  border: 1px solid #C9D3CE;                 /* decorative edge; the spine carries identity */
+  border-left: 12px solid var(--spine, var(--shelf));
+  border-radius: 3px var(--radius) var(--radius) 3px;
+}
+.card h3, .card__title { margin: 0 0 0.4rem; font-size: 1.2rem; }
+.card p { margin: 0.4rem 0 0.75rem; }
+
+/* Tag row instead of "A · B · C" strings. Topic tag wears the spine colour. */
+.tags { list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0; padding: 0; }
+.tags li { max-width: none; font-size: 0.875rem; font-weight: 700; padding: 0.1rem 0.55rem; border-radius: 3px; color: var(--ink-muted); background: var(--panel); }
+.tags li.tag-topic { color: var(--spine, var(--shelf)); background: var(--tint, var(--panel)); }
+.meta { color: var(--ink-muted); margin: 0.25rem 0; }
+
+/* Event date stamp, like a library "date due" stamp. */
+.event { display: grid; grid-template-columns: auto 1fr; gap: 1.25rem; align-items: start; }
+.stamp {
+  display: grid; place-items: center; text-align: center;
+  width: 5.25rem; padding: 0.4rem 0.25rem 0.5rem;
+  color: var(--spine, var(--shelf));
+  border: 3px double currentColor;
+  border-radius: 4px;
+  transform: rotate(-3deg);
+  font-weight: 700; line-height: 1.1;
+}
+.stamp .stamp-day { font-family: var(--font-head); font-size: 2rem; }
+.stamp .stamp-month, .stamp .stamp-weekday { font-size: 0.875rem; }
+.event h3 { margin-top: 0; }
+@media (max-width: 30rem) {
+  .event { grid-template-columns: 1fr; gap: 0.75rem; }
+  .stamp { width: auto; justify-self: start; display: flex; gap: 0.4rem; align-items: baseline; padding: 0.3rem 0.75rem; }
+  .stamp .stamp-day { font-size: 1.5rem; }
+}
+
+/* Service tiles on the home page */
+.service { border-top: 8px solid var(--spine, var(--shelf)); border-radius: var(--radius); background: var(--tint, var(--panel)); padding: 1.1rem 1.25rem 1.25rem; }
+.service h3 { margin-top: 0; color: var(--ink); }
+
+.panel { background: var(--panel); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; }
+.panel h2 { margin-top: 0; font-size: 1.35rem; }
+
+/* ---------- Breadcrumb ---------- */
+.breadcrumb ol { list-style: none; padding: 0; margin: 0.75rem 0 0; display: flex; flex-wrap: wrap; gap: 0.5rem; font-size: 0.9375rem; }
+.breadcrumb li + li::before { content: "/"; margin-right: 0.5rem; color: var(--ink-muted); }
+
+/* ---------- Forms ---------- */
+.field { margin-bottom: 1.4rem; }
+label, legend { display: block; font-weight: 700; margin-bottom: 0.25rem; }
+.hint { display: block; color: var(--ink-muted); font-size: 0.9375rem; margin-bottom: 0.35rem; }
+
+input[type="text"], input[type="email"], input[type="tel"],
+input[type="date"], input[type="number"], input[type="search"], select, textarea {
+  width: 100%;
+  max-width: 32rem;
+  min-height: 46px;
+  padding: 0.5rem 0.75rem;
+  font: inherit;
+  color: var(--ink);
+  background: var(--paper);
+  border: 2px solid var(--ink-muted);     /* 7.28:1, passes 1.4.11 */
+  border-radius: var(--radius);
+}
+
+fieldset { border: 2px solid #C9D3CE; border-radius: var(--radius); padding: 0.75rem 1.25rem 1rem; margin: 0 0 1.4rem; }
+legend { padding: 0 0.35rem; }
+.plain-fieldset { border: 0; padding: 0; margin: 0; }
+.choice { display: flex; align-items: center; gap: 0.6rem; min-height: 44px; }
+.choice label { font-weight: 400; margin: 0; }
+.choice input { width: 1.3rem; height: 1.3rem; accent-color: var(--shelf); }
+
+/* Errors: icon + text + border, not colour alone (1.4.1). */
+.error-text { display: block; color: var(--danger); font-weight: 700; margin-bottom: 0.3rem; }
+.error-text::before { content: "\26A0\FE0E  "; }
+.is-invalid, .has-error input, .has-error select, .has-error textarea { border-color: var(--danger) !important; border-width: 3px !important; }
+div.has-error { border-left: 4px solid var(--danger); padding-left: 0.85rem; }
+fieldset.has-error { border-color: var(--danger); }
+
+.alert { padding: 1rem 1.25rem; border-radius: var(--radius); border-left: 8px solid currentColor; margin-bottom: 1.5rem; }
+.alert h2, .alert h3 { margin-top: 0; }
+.alert-error, .error-summary { color: var(--danger); background: var(--danger-bg); }
+.error-summary h3 { color: var(--danger); }
+.error-summary a { color: var(--danger); font-weight: 700; }
+.alert-success { color: var(--success); background: var(--success-bg); }
+.alert-success h2 { color: var(--success); }
+
+.button {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 46px;
+  padding: 0.6rem 1.35rem;
+  font: inherit; font-weight: 700;
+  color: var(--on-shelf);
+  background: var(--shelf);
+  border: 2px solid var(--shelf);
+  border-radius: var(--radius);
+  text-decoration: none;
+  cursor: pointer;
+}
+.button:hover { background: var(--shelf-strong); border-color: var(--shelf-strong); color: var(--on-shelf); }
+.button-secondary { color: var(--shelf); background: var(--paper); }
+.button-secondary:hover { color: var(--on-shelf); }
+a.button:focus-visible { background: var(--marigold); color: var(--ink); border-color: var(--ink); }
+
+/* ---------- Filters ---------- */
+.filters h2 { margin-top: 0; font-size: 1.35rem; }
+
+div.filter-group { border-bottom: 2px solid #C9D3CE; }
+.filter-group__heading { margin: 0; font-family: var(--font-body); font-size: 1.0625rem; }
+.filter-group__toggle {
+  display: flex; align-items: center; gap: 0.5rem; width: 100%;
+  min-height: 46px; padding: 0.5rem 0;
+  font: inherit; font-weight: 700; text-align: left;
+  color: var(--ink); background: none; border: 0; cursor: pointer;
+}
+.filter-group__toggle::after { content: "\25BE"; content: "\25BE" / ""; margin-left: auto; color: var(--shelf); }
+.filter-group__toggle[aria-expanded="true"]::after { content: "\25B4"; content: "\25B4" / ""; }
+.filter-group__panel { padding: 0.25rem 0 1rem; }
+.badge { display: inline-block; font-size: 0.8125rem; line-height: 1.6; font-weight: 700; color: var(--ink); background: var(--marigold); border-radius: 4px; padding: 0 0.5rem; }
+.clear-btn { margin-top: 1.25rem; }
+
+/* Pressed = fill + tick, not colour alone (1.4.1). */
+.chip-row { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.chip {
+  display: inline-flex; align-items: center; gap: 0.3rem;
+  min-height: 44px; padding: 0.25rem 0.95rem;
+  font: inherit; font-weight: 700;
+  color: var(--spine, var(--shelf));
+  background: var(--paper);
+  border: 2px solid var(--spine, var(--shelf));
+  border-radius: 999px;
+  cursor: pointer;
+}
+.chip:hover { background: var(--tint, var(--panel)); }
+.chip[aria-pressed="true"] { color: var(--on-shelf); background: var(--spine, var(--shelf)); }
+.chip[aria-pressed="true"]::before { content: "\2713"; content: "\2713" / ""; }
+
+.result-count { font-weight: 700; }
+/* Line up the first heading in each column of a sidebar layout */
+.with-sidebar > * > h2:first-child { margin-top: 0; }
+
+/* ---------- Detail lists ---------- */
+.details-list { display: grid; gap: 0.35rem; margin: 1rem 0; }
+.details-list div { display: grid; grid-template-columns: 8rem 1fr; gap: 0.5rem; }
+.details-list dt { font-weight: 700; }
+.details-list dd { margin: 0; }
+.room-detail { margin-bottom: 1.5rem; }
+.room-detail h2 { margin-top: 0; }
+
+/* ---------- Booking ---------- */
+.slot-group[aria-busy="true"] { opacity: 0.8; }
+.booked { color: var(--ink-muted); }
+input:disabled + label { color: var(--ink-muted); text-decoration: line-through; }
+.confirmation h2 { margin-top: 0; }
+
+/* ---------- Dialog ---------- */
+.dialog {
+  max-width: 32rem; width: calc(100% - 2rem);
+  padding: 1.5rem 1.75rem;
+  color: var(--ink); background: var(--paper);
+  border: 0; border-top: 10px solid var(--shelf);
+  border-radius: var(--radius);
+}
+.dialog::backdrop { background: rgba(14, 77, 60, 0.7); }
+.dialog h2 { margin-top: 0; }
+.dialog__actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.25rem; }
+
+/* ---------- Page title (programmatic focus target) ---------- */
+.page-title:focus { outline: none; }
+.page-title:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
+
+/* ---------- Footer ---------- */
+.site-footer { margin-top: 2rem; background: var(--panel); border-top: 6px solid var(--shelf); }
+.footer-inner { padding-top: 1.5rem; padding-bottom: 2rem; }
+.footer-inner p { margin: 0.25rem 0; }
+
+/* ---------- User preferences ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}
+@media (forced-colors: active) {
+  :focus-visible, a:focus-visible { outline: 3px solid CanvasText; box-shadow: none; }
+  .button, .chip { border: 2px solid ButtonText; }
+  .chip[aria-pressed="true"] { forced-color-adjust: none; background: Highlight; color: HighlightText; }
+  .card { border-left-color: CanvasText; }
+}
+@media print {
+  .site-header::after, .hero-shelf, .skip-link { display: none; }
+}
